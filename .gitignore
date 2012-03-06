@@ -1,4 +1,5 @@
 .bundle
+.powder
 .rvmrc
 db/*.sqlite3
 log/*.log
