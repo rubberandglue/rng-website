@@ -1,0 +1,9 @@
+.bundle
+.rvmrc
+db/*.sqlite3
+log/*.log
+tmp/
+.idea/*
+config/database.yml
+public/system
+coverage/*
