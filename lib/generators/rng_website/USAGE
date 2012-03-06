@@ -1,0 +1,8 @@
+Description:
+    Installs all necessary files for the rng-website gem
+
+Example:
+    rails generate rng_website:install
+
+    This will create:
+        app/assets/stylesheets/bootstrap_import_and_overwrite.css.sass
