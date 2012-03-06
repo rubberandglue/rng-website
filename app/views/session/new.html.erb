@@ -1,0 +1,11 @@
+<% unless current_user %>
+  <%= simple_form_for :login do |f| %>
+    <fieldset>
+      <%= f.input :username, :input_html => { :autofocus => true } %>
+      <%= f.input :password %>
+    </fieldset>
+    <div class="form-actions">
+      <%= f.button :submit, t('basic_login.login.button'), class: 'btn-primary' %>
+    </div>
+  <% end %>
+<% end %>
