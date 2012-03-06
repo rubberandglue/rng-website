@@ -1,0 +1,9 @@
+en:
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nein'
+    required:
+      text: 'Benötigt'
+      mark: '*'
+    error_notification:
+      default_message: "Es wurden einige Fehler gefunden:"

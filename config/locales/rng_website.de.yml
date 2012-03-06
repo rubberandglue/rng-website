@@ -1,0 +1,10 @@
+de:
+  rng_website:
+    login:
+      button: 'Login'
+      success: 'Erfolgreich eingeloggt!'
+      error: 'Benutzername oder Passwort falsch!'
+    logout:
+      button: 'Logout'
+      success: 'Erfolgreich ausgeloggt!'
+      error: 'Nicht eingeloggt!'
