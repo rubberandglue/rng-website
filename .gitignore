@@ -2,7 +2,7 @@
 .powder
 .rvmrc
 db/*.sqlite3
-log/*.log
+*.log
 tmp/
 .idea/*
 config/database.yml
