@@ -7,6 +7,10 @@ en:
       mark: '*'
     error_notification:
       default_message: "Es wurden einige Fehler gefunden:"
+    placeholders:
+      username: 'Benutzername'
+      password: '************'
+      password_confirmation: '************'
     hints:
       user:
         password: 'Mindestens 6 Zeichen'

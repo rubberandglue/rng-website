@@ -10,3 +10,8 @@ en:
     hints:
       user:
         password: 'At least 6 characters'
+    placeholders:
+      defaults:
+        username: 'Username'
+        password: '********'
+        password_confirmation: '********'
