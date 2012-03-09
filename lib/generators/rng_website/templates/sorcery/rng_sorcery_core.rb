@@ -4,6 +4,7 @@ class RngSorceryCore < ActiveRecord::Migration
       t.string :username,         :null => false  # if you use another field as a username, for example email, you can safely remove this field.
       t.string :crypted_password, :default => nil
       t.string :salt,             :default => nil
+      t.boolean :admin
 
       t.timestamps
     end
@@ -12,6 +13,7 @@ class RngSorceryCore < ActiveRecord::Migration
       User.create do |u|
         u.username = "admin"
         u.password = "123456"
+        u.admin = true
       end
     end
 
@@ -19,6 +21,7 @@ class RngSorceryCore < ActiveRecord::Migration
       User.create do |u|
         u.username = "rubberandglue"
         u.password = "123456"
+        u.admin = true
       end
     end
     puts '====  Successfully seed admin and rubberandglue User, default password: 123456'
