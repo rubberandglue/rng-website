@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
 
   scope :non_admins, where(admin: false)
+
+  def no_admin?
+    !admin
+  end
 end
