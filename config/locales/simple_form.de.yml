@@ -7,3 +7,6 @@ en:
       mark: '*'
     error_notification:
       default_message: "Es wurden einige Fehler gefunden:"
+    hints:
+      user:
+        password: 'Mindestens 6 Zeichen'
