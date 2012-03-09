@@ -1,4 +1,5 @@
 de:
   form:
+    back: 'Zurück'
     delete: 'Löschen'
     delete_msg: 'Sind Sie sicher, dass Sie "%{item}" löschen möchten?'

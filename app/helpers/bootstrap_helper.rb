@@ -5,4 +5,12 @@ module BootstrapHelper
       t('form.delete')
     end
   end
+
+  def back_button_to(url)
+    link_to url, class: 'btn' do
+      "<i class='icon-arrow-left'></i> ".html_safe +
+      t('form.back')
+    end
+  end
+
 end
