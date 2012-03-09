@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
   validates_length_of       :password, minimum: 6
   validates_confirmation_of :password
 
-  #scope :non_admin
+  scope :non_admins, where(admin: false)
 end
