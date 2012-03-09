@@ -1,0 +1,9 @@
+<% profile = current_user.admin && @user != current_user %>
+<% if profile %>
+  <%= content_for :title, "Profil - #{@user.username}" %>
+  <h2>Profil - <%= @user.username %></h2>
+<% else %>
+  <%= content_for :title, "Passwort ändern" %>
+  <h2>Passwort ändern</h2>
+<% end %>
+<%= render 'form' %>
