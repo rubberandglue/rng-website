@@ -1,0 +1,11 @@
+<%= simple_form_for([:admin, @user]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :username if current_user.admin && @user.no_admin? %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn-success' %>
+    <%= back_button_to current_user.admin? ? admin_users_path : admin_index_path %>
+  </div>
+<% end %>
