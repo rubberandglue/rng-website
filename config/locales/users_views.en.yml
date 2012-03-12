@@ -1,0 +1,11 @@
+en:
+  admin:
+    users:
+      edit:
+        profile: 'Profile for %{user}'
+        change_password: 'Change Password'
+      index:
+        title: 'User overview'
+        username: 'Username'
+      new:
+        title: 'New User'
