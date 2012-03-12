@@ -13,4 +13,11 @@ module BootstrapHelper
     end
   end
 
+  def edit_link_to(name, url)
+    link_to url do
+      "<i class='icon-edit'></i> ".html_safe +
+      name
+    end
+  end
+
 end
