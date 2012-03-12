@@ -20,7 +20,7 @@ class Admin::UsersController < Admin::AdminController
     if current_user.no_admin? && params[:user][:username].present?
       render :edit
     else
-      update! { current_user.admin ? admin_users_path : admin_news_index_path}
+      update! { current_user.admin ? admin_users_path : admin_path}
     end
   end
 end
