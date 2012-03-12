@@ -10,3 +10,5 @@ de:
       button: 'Logout'
       success: 'Erfolgreich ausgeloggt!'
       error: 'Nicht eingeloggt!'
+    nav:
+      profile: 'Passwort ändern'

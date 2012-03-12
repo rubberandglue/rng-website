@@ -10,3 +10,5 @@ en:
       button: 'Logout'
       success: 'Successfully logged out!'
       error: 'Not logged in!'
+    nav:
+      profile: 'Change password'
