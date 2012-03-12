@@ -6,6 +6,7 @@ module RngWebsite
       include Rails::Generators::Migration
 
       source_root File.expand_path('../templates', __FILE__)
+      class_option :migrations, :type => :boolean, :default => true, :desc => "Include Migrations"
 
       def copy_scaffold_template
         copy_file 'scaffold/_form.html.erb', 'lib/templates/erb/scaffold/_form.html.erb'
@@ -16,8 +17,12 @@ module RngWebsite
       end
 
       def copy_sorcery_files
-        migration_template "sorcery/rng_sorcery_core.rb", "db/migrate/rng_sorcery_core.rb"
+        migration_template "sorcery/rng_sorcery_core.rb", "db/migrate/rng_sorcery_core.rb" if options.migrations?
         copy_file 'sorcery/user.rb', 'app/models/user.rb'
+      end
+
+      def copy_admin_navigation_file
+        copy_file 'admin_navigation.rb', 'config/admin_navigation.rb'
       end
 
       # Define the next_migration_number method (necessary for the migration_template method to work)
