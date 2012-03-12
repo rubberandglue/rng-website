@@ -7,11 +7,11 @@ require "rng-website/version"
 Gem::Specification.new do |s|
   s.name        = "rng-website"
   s.version     = RngWebsite::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RngWebsite."
-  s.description = "TODO: Description of RngWebsite."
+  s.authors     = ["Christian Finck"]
+  s.email       = ["christian@rubberandglue.at"]
+  s.homepage    = "https://github.com/finchi/rng-website"
+  s.summary     = "gem for our websites @ rubber & glue"
+  s.description = "gem for our websites @ rubber & glue"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
