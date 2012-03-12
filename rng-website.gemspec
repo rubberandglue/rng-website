@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "gem for our websites @ rubber & glue"
   s.description = "gem for our websites @ rubber & glue"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.0"
   s.add_dependency 'bootstrap-sass', '~> 2.0.1'
