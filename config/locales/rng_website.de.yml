@@ -1,5 +1,7 @@
 de:
   rng_website:
+    no_rights: 'Sie haben nicht die erforderlichen Rechte für diese Seite'
+    not_authenticated: 'Bitte zuerst einloggen'
     login:
       button: 'Login'
       success: 'Erfolgreich eingeloggt!'
