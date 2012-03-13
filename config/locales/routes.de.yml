@@ -1,0 +1,6 @@
+de:
+  resources:
+    users: 'benutzer'
+  path_names:
+    new: 'neu'
+    edit: 'bearbeiten'
