@@ -3,6 +3,7 @@ require "simple_form"
 require "sorcery"
 require "bootstrap-sass"
 require "simple_navigation"
+require "i18n_routing"
 
 module RngWebsite
   require "rng-website/bootstrap_simple_nav.rb" if defined?(::SimpleNavigation)
