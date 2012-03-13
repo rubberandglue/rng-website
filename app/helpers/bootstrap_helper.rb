@@ -21,9 +21,9 @@ module BootstrapHelper
   end
 
   def edit_button_to(name, url)
-    link_to url, class: 'btn' do
+    link_to url, class: 'btn .btn-primary' do
       "<i class='icon-edit'></i> ".html_safe +
-      name
+      t('form.edit')
     end
   end
 
