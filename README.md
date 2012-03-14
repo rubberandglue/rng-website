@@ -6,7 +6,7 @@ Install
 
 `Gemfile`
 
-    gem 'rng-website', git: 'git://github.com/finchi/rng-website.git'
+    gem 'rng-website', git: 'git://github.com/rubberandglue/rng-website.git'
 
 execute
 
