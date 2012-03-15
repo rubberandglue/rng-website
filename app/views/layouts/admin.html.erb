@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Admin</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= render_navigation :context => :admin, renderer: :topbar  %>
+  <head>
+    <title>Admin</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= render_navigation :context => :admin, renderer: :topbar  %>
+      </div>
     </div>
   </div>
-</div>
+  <%= display_flash_messages %>
+  <%= yield %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>
