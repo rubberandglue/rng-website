@@ -1,3 +1,5 @@
 //= require markitup
 
-$("textarea.markitup").markItUp(mySettings);
+$(document).ready(function() {
+  $("textarea.markitup").markItUp(mySettings);
+});
