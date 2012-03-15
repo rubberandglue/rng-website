@@ -7,7 +7,7 @@ module RngWebsite
     end
 
     def not_authenticated
-      redirect_to login_url, :alert => t('rng-website.not_authenticated')
+      redirect_to login_url, :alert => t('rng_website.not_authenticated')
     end
 
     private
