@@ -1,0 +1,45 @@
+# encoding: utf-8
+
+class <%= uploader_name.capitalize %>Uploader < CarrierWave::Uploader::Base
+
+  include CarrierWave::RMagick
+
+  # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
+  # include Sprockets::Helpers::RailsHelper
+  # include Sprockets::Helpers::IsolatedHelper
+
+  storage :file
+
+  <%= "process :get_geometry" if options[:image] %>
+
+  # Add versions here
+  ###################
+
+  def store_dir
+    "system/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}_#{model.updated_at.to_i.to_s}"
+  end
+
+  def cache_dir
+    "system/tmp"
+  end
+
+  def extension_white_list
+    %w(jpg jpeg gif png)
+    #%w(pdf)
+  end
+
+  <% if options[:image] %>
+  def geometry
+    @geometry
+  end
+
+  private
+
+  def get_geometry
+    if @file
+      img = ::Magick::Image::read(@file.file).first
+      @geometry = [ img.columns, img.rows ]
+    end
+  end
+  <% end %>
+end
