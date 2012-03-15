@@ -1,5 +1,5 @@
 module RngWebsite
-  module Uploader
+  module ImageUploader
     private
     def get_dimensions_for(image)
       if send("#{image.to_s}").present? && send("#{image.to_s}_changed?")

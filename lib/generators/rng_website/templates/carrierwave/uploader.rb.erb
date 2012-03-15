@@ -9,11 +9,14 @@ class <%= uploader_name.capitalize %>Uploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   storage :file
-
+  #process :resize_to_fit => [xxx, xxx]
   <%= "process :get_geometry" if options[:image] %>
 
   # Add versions here
   ###################
+  # version :thumb do
+  #   process :resize_to_fill => [xxx,xxx]
+  # end
 
   def store_dir
     "system/#{model.class.to_s.underscore}/#{mounted_as}/#{model.updated_at.to_i.to_s}"
