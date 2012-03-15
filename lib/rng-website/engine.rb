@@ -7,6 +7,7 @@ require "i18n_routing"
 
 module RngWebsite
   require "rng-website/bootstrap_simple_nav.rb" if defined?(::SimpleNavigation)
+  require "rng-website/simple_form_image_input.rb"
   autoload :ApplicationController, 'rng-website/application_controller'
   class Engine < ::Rails::Engine
     config.generators do |g|
