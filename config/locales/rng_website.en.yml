@@ -1,7 +1,9 @@
 en:
   rng_website:
+    adminname: 'Adminpanel'
     no_rights: 'You are not allows to see this Pate'
     not_authenticated: 'Please login first'
+    user_not_found: 'User not found'
     login:
       button: 'Login'
       success: 'Successfully logged in'

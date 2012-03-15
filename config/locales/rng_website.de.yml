@@ -1,5 +1,6 @@
 de:
   rng_website:
+    adminname: 'Adminbereich'
     no_rights: 'Sie haben nicht die erforderlichen Rechte für diese Seite'
     not_authenticated: 'Bitte zuerst einloggen'
     user_not_found: 'Dieser Benutzer wurde nicht gefunden'
