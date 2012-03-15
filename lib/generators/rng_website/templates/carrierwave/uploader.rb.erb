@@ -27,11 +27,14 @@ class <%= uploader_name.capitalize %>Uploader < CarrierWave::Uploader::Base
   end
 
   def extension_white_list
+  <% if options[:image] %>
     %w(jpg jpeg gif png)
-    #%w(pdf)
+  <% else %>
+    %w(pdf)
+  <% end %>
   end
 
-  <% if options[:image] %>
+<% if options[:image] %>
   def geometry
     @geometry
   end
@@ -41,8 +44,8 @@ class <%= uploader_name.capitalize %>Uploader < CarrierWave::Uploader::Base
   def get_geometry
     if @file
       img = ::Magick::Image::read(@file.file).first
-      @geometry = [ img.columns, img.rows ]
+      <%= "model.#{uploader_name}_width, model.#{uploader_name}_height = [ img.columns, img.rows ]" %>
     end
   end
-  <% end %>
+<% end %>
 end
