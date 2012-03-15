@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require bootstrap_import_and_overwrite
+ *= require rng-website/markitup
  *= require_tree .
 */
