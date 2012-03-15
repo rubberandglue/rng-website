@@ -9,4 +9,9 @@ module ViewHelper
       end.join.html_safe
     end
   end
+
+  def site_title(title, header = :h2)
+    content_for :title, title
+    content_tag header, title
+  end
 end
