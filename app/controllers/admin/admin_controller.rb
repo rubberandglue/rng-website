@@ -7,7 +7,7 @@ class Admin::AdminController < ApplicationController
 
   def require_admin
     unless current_user.admin
-      redirect_to admin_path, alert: t('rng-website.no_rights')
+      redirect_to admin_path, alert: t('rng_website.no_rights')
     end
   end
 end
