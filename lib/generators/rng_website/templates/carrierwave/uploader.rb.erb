@@ -35,10 +35,6 @@ class <%= uploader_name.capitalize %>Uploader < CarrierWave::Uploader::Base
   end
 
 <% if options[:image] %>
-  def geometry
-    @geometry
-  end
-
   private
 
   def get_geometry
