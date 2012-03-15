@@ -8,8 +8,14 @@ class Admin::UsersController < Admin::AdminController
   end
 
   def edit
-    @user = User.find(current_user.id) unless current_user.admin
-    edit!
+    if current_user.admin
+      @user = User.non_admins.find_by_id(params[:id])
+      unless @user
+        redirect_to admin_users_path, alert: t('rng_website.user_not_found')
+      end
+    else
+      @user = User.find(current_user.id)
+    end
   end
 
   def create
@@ -20,7 +26,7 @@ class Admin::UsersController < Admin::AdminController
     if current_user.no_admin? && params[:user][:username].present?
       render :edit
     else
-      update! { current_user.admin ? admin_users_path : admin_path}
+      update! { current_user.admin ? admin_users_path : admin_path }
     end
   end
 end
