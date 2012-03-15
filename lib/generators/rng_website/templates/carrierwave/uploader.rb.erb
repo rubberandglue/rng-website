@@ -16,7 +16,7 @@ class <%= uploader_name.capitalize %>Uploader < CarrierWave::Uploader::Base
   ###################
 
   def store_dir
-    "system/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}_#{model.updated_at.to_i.to_s}"
+    "system/#{model.class.to_s.underscore}/#{mounted_as}/#{model.updated_at.to_i.to_s}"
   end
 
   def cache_dir
