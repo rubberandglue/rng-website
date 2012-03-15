@@ -1,6 +1,6 @@
 class ImageInput < SimpleForm::Inputs::FileInput
   def input
-    version = input_html_options.delete(:preview_version)
+    version = input_html_options.delete(:version)
     out = ''
     if object.send("#{attribute_name}?")
       out << template.image_tag(object.send(attribute_name).tap {|o| break o.send(version) if version}.send('url'), class: 'preview-image')
