@@ -1,10 +1,9 @@
 .bundle
 .powder
 .rvmrc
-db/*.sqlite3
+*.sqlite3
 *.log
-tmp/
 .idea/*
-config/database.yml
-public/system
-coverage/*
+spec/dummy/config/database.yml
+spec/dummy/tmp/
+spec/dummy/public/system
