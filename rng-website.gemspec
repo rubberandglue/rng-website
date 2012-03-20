@@ -18,9 +18,11 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.0"
   s.add_dependency 'bootstrap-sass', '~> 2.0.1'
   s.add_dependency "simple_form", "> 2.0.0"
+  s.add_dependency "inherited_resources", "~> 1.3.0"
   s.add_dependency "sorcery", "~> 0.7.6"
   s.add_dependency "simple-navigation", '~> 3.7.0'
   s.add_dependency "i18n_routing", '~> 0.6.1'
+  s.add_dependency "friendly_id", "~> 4.0.1"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'sass-rails'

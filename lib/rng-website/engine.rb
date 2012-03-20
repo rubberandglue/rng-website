@@ -3,7 +3,9 @@ require "simple_form"
 require "sorcery"
 require "bootstrap-sass"
 require "simple_navigation"
+require "inherited_resources"
 require "i18n_routing"
+require "friendly_id"
 
 module RngWebsite
   require "rng-website/bootstrap_simple_nav.rb" if defined?(::SimpleNavigation)

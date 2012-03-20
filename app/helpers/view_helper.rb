@@ -1,4 +1,8 @@
 module ViewHelper
+  def w3c_date(date)
+    date.utc.strftime("%Y-%m-%dT%H:%M:%S+00:00")
+  end
+
   def display_flash_messages
     if flash.any?
       flash.map do |type, message|

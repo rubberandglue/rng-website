@@ -1,13 +1,16 @@
 class RngSorceryCore < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
-      t.string :username,         :null => false  # if you use another field as a username, for example email, you can safely remove this field.
-      t.string :crypted_password, :default => nil
-      t.string :salt,             :default => nil
-      t.boolean :admin,           :default => false
-
+      t.string  :username,         :null => false  # if you use another field as a username, for example email, you can safely remove this field.
+      t.string  :crypted_password, :default => nil
+      t.string  :salt,             :default => nil
+      t.boolean :admin,            :default => false
+      t.string  :slug
       t.timestamps
     end
+
+    add_index :users, :slug, unique: true
+
     puts '====  Seeding default users'
     unless User.find_by_username "admin"
       User.create do |u|
