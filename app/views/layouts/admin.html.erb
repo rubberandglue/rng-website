@@ -15,7 +15,24 @@
     </div>
   </div>
   <%= display_flash_messages %>
-  <%= yield %>
+  <div class="container-fluid">
+    <header>
+      <div class="page-header">
+        <h1>Überschrift</h1>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="row-fluid">
+        <div class="span6">
+          <p>&copy; <%= Time.new.year %> <%= link_to 'rubber & glue OG', 'http://www.rubberandglue.at' %></p>
+        </div>
+        <div class="span6">
+          <p class="pull-right"><%= link_to 'Impressum', 'http://www.rubberandglue.at/impressum' %> | <%= link_to 'Kontakt', 'mailto:service@rubberandglue.at' %></p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   </body>
 </html>
