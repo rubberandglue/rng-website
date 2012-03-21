@@ -4,4 +4,5 @@ en:
     delete: 'Delete'
     delete_msg: 'Are you sure you want to delete "%{item}"?'
     edit: 'Edit'
+    edit_item: 'Edit %{item}'
     remove_image: 'Remove Image?'
