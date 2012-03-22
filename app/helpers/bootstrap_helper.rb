@@ -1,6 +1,11 @@
 module BootstrapHelper
+  def header(name)
+    content_tag :div, content_tag(:h1, name), class: 'page-header'
+
+  end
+
   def delete_button_for(url, item)
-    link_to url, class: 'btn btn-danger', methode: 'delete', confirm: t('form.delete_msg', item: item) do
+    link_to url, class: 'btn btn-mini btn-danger', methode: 'delete', confirm: t('form.delete_msg', item: item) do
       "<i class='icon-trash icon-white'></i> ".html_safe +
       t('form.delete')
     end
@@ -21,7 +26,7 @@ module BootstrapHelper
   end
 
   def edit_button_to(name, url)
-    link_to url, class: 'btn .btn-primary' do
+    link_to url, class: 'btn btn-mini' do
       "<i class='icon-edit'></i> ".html_safe +
       t('form.edit')
     end

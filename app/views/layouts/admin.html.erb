@@ -9,18 +9,13 @@
   <body>
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container">
+      <div class="container-fluid">
         <%= render_navigation :context => :admin, renderer: :topbar  %>
       </div>
     </div>
   </div>
-  <%= display_flash_messages %>
-  <div class="container-fluid">
-    <header>
-      <div class="page-header">
-        <h1>Überschrift</h1>
-      </div>
-    </header>
+  <div class="container-fluid body">
+    <%= display_flash_messages %>
     <%= yield %>
     <footer>
       <div class="row-fluid">
