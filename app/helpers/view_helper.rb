@@ -30,4 +30,10 @@ module ViewHelper
       end
     end
   end
+  
+  def oembed_video_tag(video_html)
+    if video_html.present?
+      video_html.html_safe
+    end
+  end
 end

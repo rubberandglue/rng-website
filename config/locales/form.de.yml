@@ -6,3 +6,6 @@ de:
     edit: 'Bearbeiten'
     edit_item: 'Bearbeiten %{item}'
     remove_image: 'Bild Löschen?'
+  rng-website:
+    oembed:
+      error: 'Diese Url wird nicht unterstützt'
