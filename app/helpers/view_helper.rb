@@ -20,4 +20,14 @@ module ViewHelper
       content_tag header, title
     end
   end
+
+  def uploaded_image_tag(image)
+    if image.present?
+      image_tag image
+    else
+      if image.url.present?
+        image_tag image.url
+      end
+    end
+  end
 end
