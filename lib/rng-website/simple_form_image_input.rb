@@ -12,3 +12,14 @@ class ImageInput < SimpleForm::Inputs::FileInput
     (out << super).html_safe
   end
 end
+
+require 'simple_form/core_ext/hash'
+
+module SimpleForm
+  class FormBuilder < ActionView::Helpers::FormBuilder
+    def image(attribute_name, options = {})
+      input("#{attribute_name}_cache", as: :hidden) +
+      input(attribute_name, options)
+    end
+  end
+end
