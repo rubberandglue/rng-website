@@ -18,6 +18,12 @@ module BootstrapHelper
     end
   end
 
+  def footer_back_button_to(url)
+    content_tag :div, class: 'form-actions' do
+      back_button_to(url)
+    end
+  end
+
   def edit_link_to(name, url)
     link_to url do
       "<i class='icon-edit'></i> ".html_safe +
