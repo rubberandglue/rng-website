@@ -8,9 +8,9 @@ class Admin::UsersController < Admin::AdminController
   end
 
   def edit
-    if current_user.admin
-      @user = User.non_admins.find_by_id(params[:id])
-      unless @user
+    if current_user.admin?
+      @user = User.find(params[:id])
+      if (@user.admin? and @user != current_user) or @user.nil?
         redirect_to admin_users_path, alert: t('rng_website.user_not_found')
       end
     else
