@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rng-website (0.1.1)
+    rng-website (0.1.2)
       bootstrap-sass (~> 2.0.1)
       friendly_id (~> 4.0.1)
       i18n_routing (~> 0.6.1)
