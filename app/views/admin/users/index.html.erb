@@ -1,21 +1,41 @@
 <%= content_for :title, t('.title') %>
 <%= header t '.title' %>
-<table class='table table-striped'>
-  <thead>
-  <tr>
-    <th><%= t '.username' %></th>
-    <th></th>
-  </tr>
-  </thead>
-  <tfoot></tfoot>
-  <tbody>
-    <% @users.each do |user| %>
+
+<div class="row-fluid">
+  <div class="span9">
+    <table class='table table-striped'>
+      <thead>
       <tr>
-        <td><%= edit_link_to user.username, edit_admin_user_path(user) %></td>
-        <td>
-          <%= delete_button_for admin_user_path(user), user.username %>
-        </td>
+        <th><%= t '.username' %></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
+      <tfoot></tfoot>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= edit_link_to user.username, edit_admin_user_path(user) %></td>
+            <td>
+              <%= delete_button_for admin_user_path(user), user.username %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="span3">
+    <div class="well sidebar">
+      <ul class="nav nav-list">
+        <li class="nav-header">
+          Aktionen
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-plus"></i>
+            Anlegen
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
