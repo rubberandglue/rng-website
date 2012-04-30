@@ -1,6 +1,6 @@
 module SessionHelper
   def logout_link
-    link_to t('rng_website.logout.button'), logout_path, method: :delete
+    icon_link_to t('rng_website.logout.button'), logout_path, 'remove', method: :delete
   end
 
   def admin?
