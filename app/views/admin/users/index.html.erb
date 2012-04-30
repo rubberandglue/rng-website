@@ -2,10 +2,7 @@
 
 <%= content_for :sidebar do %>
   <li>
-    <a href="#">
-      <i class="icon-plus"></i>
-      Anlegen
-    </a>
+    <%= add_link_to t('form.add', item: User.model_name.human(count: 0)), new_admin_user_path %>
   </li>
 <% end %>
 
