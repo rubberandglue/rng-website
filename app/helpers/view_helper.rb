@@ -16,8 +16,10 @@ module ViewHelper
 
   def site_title(title, header = :h1)
     content_for :title, title
-    content_tag :div, class: 'page-header' do
-      content_tag header, title
+    content_for :header do
+      content_tag :div, class: 'page-header' do
+        content_tag header, title
+      end
     end
   end
 

@@ -1,8 +1,6 @@
 <% if current_user.admin && @user != current_user %>
-  <%= content_for :title, t('.profile', user: @user.username) %>
-  <h2><%= t('.profile', user: @user.username) %></h2>
+  <%= site_title t('.profile', user: @user.username) %>
 <% else %>
-  <%= content_for :title, t('.change_password') %>
-  <h2><%= t('.change_password')  %></h2>
+  <%= site_title t('.change_password') %>
 <% end %>
 <%= render 'form' %>
