@@ -2,32 +2,48 @@
 <html>
   <head>
     <title><%= ([yield(:title).presence, t('rng_website.adminname')].compact.join(' - ')) %></title>
-    <%= stylesheet_link_tag    "admin", :media => "all" %>
+    <%= stylesheet_link_tag "admin", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container-fluid">
-        <%= render_navigation :context => :admin, renderer: :topbar  %>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <%= render_navigation :context => :admin, renderer: :topbar %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid body">
-    <%= display_flash_messages %>
-    <%= yield %>
-    <footer>
+    <div class="container-fluid body">
+      <%= display_flash_messages %>
+      <%= yield :header %>
       <div class="row-fluid">
-        <div class="span6">
-          <p>&copy; <%= Time.new.year %> <%= link_to 'rubber & glue OG', 'http://www.rubberandglue.at' %></p>
+        <div class="span9">
+          <%= yield %>
         </div>
-        <div class="span6">
-          <p class="pull-right"><%= link_to 'Impressum', 'http://www.rubberandglue.at/impressum' %> | <%= link_to 'Kontakt', 'mailto:service@rubberandglue.at' %></p>
+        <div class="span3">
+          <div class="well sidebar">
+            <ul class="nav nav-list">
+              <li class="nav-header">
+                <%= t ".sidebar" %>
+              </li>
+              <%= yield :sidebar %>
+            </ul>
+          </div>
         </div>
       </div>
-    </footer>
-  </div>
+      <footer>
+        <div class="row-fluid">
+          <div class="span6">
+            <p>&copy; <%= Time.new.year %> <%= link_to 'rubber & glue OG', 'http://www.rubberandglue.at' %></p>
+          </div>
+          <div class="span6">
+            <p class="pull-right"><%= link_to 'Impressum', 'http://www.rubberandglue.at/impressum' %>
+              | <%= link_to 'Kontakt', 'mailto:service@rubberandglue.at' %></p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
   </body>
 </html>

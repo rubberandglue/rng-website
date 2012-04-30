@@ -1,5 +1,6 @@
 en:
   rng_website:
+    welcome_back: 'Welcome back'
     adminname: 'Adminpanel'
     no_rights: 'You are not allows to see this Pate'
     not_authenticated: 'Please login first'

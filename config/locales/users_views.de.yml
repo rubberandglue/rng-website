@@ -1,4 +1,7 @@
 de:
+  layouts:
+    admin:
+      sidebar: 'Aktionen'
   admin:
     users:
       edit:

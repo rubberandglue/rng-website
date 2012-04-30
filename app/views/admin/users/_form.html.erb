@@ -6,6 +6,9 @@
 
   <div class="form-actions">
     <%= f.button :submit, class: 'btn-success' %>
-    <%= back_button_to current_user.admin? ? admin_users_path : admin_path %>
   </div>
+<% end %>
+
+<%= content_for :sidebar do %>
+  <li><%= back_link_to current_user.admin? ? admin_users_path : admin_path %></li>
 <% end %>

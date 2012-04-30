@@ -1,5 +1,11 @@
-<%= content_for :title, t('.title') %>
-<%= header t '.title' %>
+<%= site_title t '.title' %>
+
+<%= content_for :sidebar do %>
+  <li>
+    <%= add_link_to t('form.add', item: User.model_name.human(count: 0)), new_admin_user_path %>
+  </li>
+<% end %>
+
 <table class='table table-striped'>
   <thead>
   <tr>
@@ -9,13 +15,13 @@
   </thead>
   <tfoot></tfoot>
   <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= edit_link_to user.username, edit_admin_user_path(user) %></td>
-        <td>
-          <%= delete_button_for admin_user_path(user), user.username %>
-        </td>
-      </tr>
-    <% end %>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= edit_link_to user.username, edit_admin_user_path(user) %></td>
+      <td>
+        <%= delete_button_for admin_user_path(user), user.username %>
+      </td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
