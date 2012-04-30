@@ -1,2 +1,7 @@
-<%= header 'Hello ' + current_user.username %>
-<%= logout_link %>
+<%= site_title 'Hello ' + current_user.username %>
+
+<%= t 'rng_website.welcome_back' %>
+
+<%= content_for :sidebar do %>
+  <li><%= logout_link %></li>
+<% end %>
